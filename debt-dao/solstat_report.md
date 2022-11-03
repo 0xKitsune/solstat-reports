@@ -6,6 +6,8 @@ The following sections detail the high, medium and low severity vulnerabilities 
 
 ## Low Risk
 
+### Use of unsafe ERC20 Operations
+
 ERC20 operations can be unsafe due to different implementations and vulnerabilities in the standard. To account for this, either use OpenZeppelin's SafeERC20 library or wrap each operation in a require statement.
 
 Additionally, ERC20's approve functions have a known race-condition vulnerability. To account for this, use OpenZeppelin's SafeERC20 library's `safeIncrease` or `safeDecrease` Allowance functions.
